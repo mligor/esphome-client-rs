@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Example",
+            "cargo": {
+                "args": ["build", "--example=simple-connection", "--package=esphome-client-rs"],
+                // "env": { "RUSTFLAGS": "-Clinker=ld.mold" }, // Extra environment variables.
+                "filter": {
+                    "name": "simple-connection",
+                    "kind": "example"
+                },
+                "problemMatcher": "$rustc" // Problem matcher(s) to apply to cargo output.
+            },
+            "args": [],
+            "env": {
+                "RUST_BACKTRACE": "full",
+                "RUST_LOG": "debug",
+                "TERM": "xterm-256color"
+                //"PLUGINS": "a,b"
+            },
+            "cwd": "${workspaceFolder}",
+            "internalConsoleOptions": "openOnSessionStart",
+            "console": "internalConsole"
+        }
+    ]
+}

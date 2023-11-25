@@ -1,0 +1,17 @@
+tabWidth: 4
+useTabs: false
+singleQuote: true
+printWidth: 120
+trailingComma: 'es5'
+semi: true
+organizeImports: true
+arrowParens: avoid
+
+overrides:
+  - files: '*.html'
+    options:
+      printWidth: 180
+
+  - files: '*.md'
+    options:
+      printWidth: -1
